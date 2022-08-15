@@ -19,6 +19,7 @@ const country = document.getElementById(`country`)
 // const url = 'https://weatherapi-com.p.rapidapi.com/current.json?q=Tokyo' 
 
 const getData = (city) => {
+	console.log(city)
 	fetch(`https://weatherapi-com.p.rapidapi.com/current.json?q=${city}`, options)
 	.then(response => response.json())
 	.then(response => {
@@ -34,4 +35,4 @@ const getData = (city) => {
 	.catch(err => console.error(err));
 }
 
-searchBtn.onclick = ()=> getData(citySearch.value);
+searchBtn.onclick = ()=> getData(citySearch.value.replace(' ', '%20'));
