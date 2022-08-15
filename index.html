@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,42 @@
     <link rel="stylesheet" href="./style.css">
     <title>Wheather</title>
 </head>
+
 <body>
-    <h1 class="branding" >True Wheather</h1>
+    <h3>True Wheather</h3>
     <div class="searchdiv">
-    <input type="text" placeholder="Type city name here"> <button id="searchbtn">Search</button>
-</div>
+        <input type="text" placeholder="Type city name here" id="citySearch">
+        <button id="searchbtn">Search</button>
+    </div>
     <div class="card">
         <div class="imgbx">
-            <h1 id="cityname">Solapur</h1>
+            <h4 id="wheather">---</h4>
         </div>
         <div class="content">
             <div class="data">
-                <p>Temperature: <span id="temp">--</span></p>
+                <div class="cityName">
+                    <h1 id="cityname">city</h1>
+                </div>
+                <div class="moredtls">
+                    <div class="prop">
+                        <p>Temperature (°C) :</p>
+                        <p>Feels Like (°C) :</p>
+                        <p>Temperature (°F) :</p>
+                        <p>Feels Like (°F) :</p>
+                        <p>Country :</p>
+                    </div>
+                    <div class="value">
+                        <span id="temp" class="c">--</span><br>
+                        <span id="flc" class="c">--</span><br>
+                        <span id="fer" class="f">--</span><br>
+                        <span id="flf" class="f">--</span><br>
+                        <span id="country">---</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- <script src="./script.js"></script> -->
+    <script src="./script.js"></script>
 </body>
+
 </html>

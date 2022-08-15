@@ -9,21 +9,18 @@ body{
     background: linear-gradient(skyblue, white);
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: start;
+    gap: 4rem;
     align-items: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: .7s;
 }
 
-.branding{
+h3{
+    margin-top: 2rem;
     font-size: 3rem;
-    font-weight: 1000;
-    color: transparent;
-    text-transform: uppercase;
-    letter-spacing: 8px;
-    background:linear-gradient(darkblue,white);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 1px black;
+    color: #fff;
+    text-shadow: 0px 2px 5px black;
 }
 
 .searchdiv input{
@@ -33,7 +30,6 @@ body{
     height: 2.5rem;
     width: 30vw;
     text-align: center;
-    transition: .7s;
 }
 
 .searchdiv input:hover{
@@ -50,10 +46,11 @@ body{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin: 5px;
+    margin: 10px;
     text-transform: uppercase;
     letter-spacing: 4px;
     font-weight: bold;
+    transition: .5s;
 }
 
 .searchdiv button:hover{
@@ -61,17 +58,23 @@ body{
     background: linear-gradient(90deg, darkblue, lightblue);
 }
 
+.searchdiv{
+    margin-top: 4rem;
+}
+
 .card{
-    width: 35vw;
-    height: 20vh;
+    width: auto;
+    height: 140px;
     background: linear-gradient(45deg, steelblue,white);
     box-shadow: 0px 2px 10px black;
     border-radius: 20px;
+    padding: 1rem;
     transition: .5s;
 }
 
 .card:hover{
-    height:40vh;
+    height: 350px;
+    width: auto;
     background: linear-gradient(360deg, steelblue,white);
 }
 
@@ -81,41 +84,76 @@ body{
     left: 50%;
     transform: translateX(-50%);
     background-color: #fff;
-    width: min-content;
-    height: 8vh;
+    width:fit-content;
+    height: min-content;
     padding: 10px;
     box-shadow: 0px 2px 6px black;
     overflow: hidden;
     border-radius: 10px;
     text-align: center;
-    transition: .5s;
     text-transform: uppercase;
     color: darkblue;
 }
 
-.card:hover .imgbx{
-    height: 10vh;
+.cityName h1{
+    text-transform: uppercase;
+    color: darkblue;
+    text-shadow: 0px 2px 4px gray;
 }
 
-.imgbx h1{
-    transition: .5s;
+.content{
+    position: relative;
+    height: 40%;
+    width: 100%;
+    overflow: hidden;
 }
 
-.card:hover .imgbx h1{
-    font-size: 2.5rem;
+.card:hover .content{
+    height: fit-content;
 }
 
 .data{
     text-align: center;
 }
 
-.data p{
-    font-size: 2rem;
-    font-weight: bold;
-    transition: .5s;
+.card:hover .data .cityName p{
+    font-size: 1.5rem;
+    text-align: left;
+    margin-bottom: 0;
 }
 
-.card:hover .data p{
+.moredtls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: .7s;
+}
+
+.value {
+    margin-right: 20px;
+    text-align: left;
+}
+
+span {
+    text-align: left;
+    line-height: 20px;
     font-size: 1.5rem;
     font-weight: bold;
+    transition: .5s;
+    line-height: 40px;
+}
+
+.card:hover .data .moredtls p{
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 40px;
+    text-align: right;
+}
+
+.card .data .f::after{
+    content: '°F';
+}
+.card .data .c::after{
+    content: '°C';
 }
