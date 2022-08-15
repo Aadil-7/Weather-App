@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(skyblue, white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.branding{
+    font-size: 3rem;
+    font-weight: 1000;
+    color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    background:linear-gradient(darkblue,white);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 1px black;
+}
+
+.searchdiv input{
+    background: linear-gradient(90deg, lightblue, white);
+    border: none;
+    box-shadow: 0px 1px 2px black;
+    height: 2.5rem;
+    width: 30vw;
+    text-align: center;
+    transition: .7s;
+}
+
+.searchdiv input:hover{
+    background:linear-gradient(90deg, white, steelblue);
+}
+
+.searchdiv button{
+    display: block;
+    background: linear-gradient(90deg, lightblue, white);
+    border: none;
+    box-shadow: 0px 1px 2px black;
+    height: 2.5rem;
+    width: 15vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 5px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+.searchdiv button:hover{
+    color: white;
+    background: linear-gradient(90deg, darkblue, lightblue);
+}
+
+.card{
+    width: 35vw;
+    height: 20vh;
+    background: linear-gradient(45deg, steelblue,white);
+    box-shadow: 0px 2px 10px black;
+    border-radius: 20px;
+    transition: .5s;
+}
+
+.card:hover{
+    height:40vh;
+    background: linear-gradient(360deg, steelblue,white);
+}
+
+.imgbx{
+    position: relative;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    width: min-content;
+    height: 8vh;
+    padding: 10px;
+    box-shadow: 0px 2px 6px black;
+    overflow: hidden;
+    border-radius: 10px;
+    text-align: center;
+    transition: .5s;
+    text-transform: uppercase;
+    color: darkblue;
+}
+
+.card:hover .imgbx{
+    height: 10vh;
+}
+
+.imgbx h1{
+    transition: .5s;
+}
+
+.card:hover .imgbx h1{
+    font-size: 2.5rem;
+}
+
+.data{
+    text-align: center;
+}
+
+.data p{
+    font-size: 2rem;
+    font-weight: bold;
+    transition: .5s;
+}
+
+.card:hover .data p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
